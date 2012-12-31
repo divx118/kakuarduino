@@ -477,8 +477,10 @@ void kk_statehandler(void)
                       else if (data==KK_R_ONE_OLD)
                           bit = 1;
                       else
+                        {
                           bit = 0; 
                           err = ERR_DATA_OLD; 
+                        }  
                       rdata >>= 1;
                       if (bit)
                         {
@@ -504,8 +506,10 @@ void kk_statehandler(void)
                             }
                         }
                       else 
+                        {
                           bit = 0;
                           err = ERR_DATA_NEW; 
+                        }  
                       rdata <<= 1;
                       if (bit)
                         {
